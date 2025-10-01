@@ -1,1 +1,441 @@
-lala
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <base target="_self">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Développeur | Votre Nom</title>
+    <meta name="description" content="Portfolio professionnel d'un développeur full-stack spécialisé en technologies modernes">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#3B82F6",
+                        secondary: "#1E40AF",
+                        accent: "#10B981",
+                        dark: "#1F2937"
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50 text-gray-800">
+    <!-- Navigation -->
+    <header class="fixed w-full bg-white/90 backdrop-blur-sm shadow-sm z-50">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold text-primary">DevPortfolio</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#accueil" class="text-gray-600 hover:text-primary transition-colors">Accueil</a>
+                    <a href="#apropos" class="text-gray-600 hover:text-primary transition-colors">À Propos</a>
+                    <a href="#competences" class="text-gray-600 hover:text-primary transition-colors">Compétences</a>
+                    <a href="#projets" class="text-gray-600 hover:text-primary transition-colors">Projets</a>
+                    <a href="#contact" class="text-gray-600 hover:text-primary transition-colors">Contact</a>
+                </div>
+                <button class="md:hidden text-gray-600">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="accueil" class="min-h-screen gradient-bg flex items-center pt-20">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="md:w-1/2 text-white">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-4">Développeur Full-Stack</h1>
+                    <p class="text-xl md:text-2xl mb-6 opacity-90">Je crée des applications web modernes et performantes</p>
+                    <p class="text-lg mb-8 opacity-80">Spécialisé en React, Node.js et technologies cloud avec 3+ ans d'expérience</p>
+                    <div class="flex space-x-4">
+                        <button class="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                            Voir mes projets
+                        </button>
+                        <button class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-primary transition-colors">
+                            Télécharger CV
+                        </button>
+                    </div>
+                </div>
+                <div class="md:w-1/2 mt-10 md:mt-0 flex justify-center">
+                    <div class="relative">
+                        <div class="w-80 h-80 bg-white/10 rounded-full flex items-center justify-center backdrop-blur-sm">
+                            <img 
+                                src="https://picsum.photos/300?random=1" 
+                                alt="Photo de profil développeur" 
+                                class="w-72 h-72 rounded-full object-cover border-4 border-white"
+                                loading="lazy"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- À Propos Section -->
+    <section id="apropos" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-dark">À Propos de Moi</h2>
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <img 
+                        src="https://picsum.photos/500/400?random=2" 
+                        alt="Environnement de travail développeur" 
+                        class="rounded-lg shadow-lg w-full"
+                        loading="lazy"
+                    />
+                </div>
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-semibold mb-4 text-primary">Passionné par le code et l'innovation</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Développeur full-stack avec une solide expérience dans la création d'applications web modernes. 
+                        Je mets mon expertise au service de projets innovants en utilisant les dernières technologies.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4 mb-6">
+                        <div class="flex items-center">
+                            <i class="fas fa-calendar-alt text-accent mr-3"></i>
+                            <span><strong>Expérience:</strong> 3+ ans</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-project-diagram text-accent mr-3"></i>
+                            <span><strong>Projets:</strong> 50+ réalisés</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-graduation-cap text-accent mr-3"></i>
+                            <span><strong>Diplôme:</strong> Master Informatique</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-map-marker-alt text-accent mr-3"></i>
+                            <span><strong>Localisation:</strong> Paris, France</span>
+                        </div>
+                    </div>
+                    <button class="bg-primary text-white px-6 py-3 rounded-lg hover:bg-secondary transition-colors">
+                        En savoir plus
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Compétences Section -->
+    <section id="competences" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-dark">Mes Compétences</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Frontend -->
+                <div class="bg-white rounded-xl p-6 shadow-lg card-hover">
+                <div class="text-center mb-4">
+                    <i class="fas fa-code text-4xl text-primary mb-3"></i>
+                <h3 class="text-xl font-semibold mb-4">Frontend</h3>
+                <div class="space-y-3">
+                    <div>
+                        <div class="flex justify-between mb-1">
+                            <span>React.js</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2">
+                            <div class="bg-primary h-2 rounded-full" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-1">
+                            <span>Vue.js</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2">
+                            <div class="bg-primary h-2 rounded-full" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-1">
+                            <span>TypeScript</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2">
+                            <div class="bg-primary h-2 rounded-full" style="width: 80%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Backend -->
+            <div class="bg-white rounded-xl p-6 shadow-lg card-hover">
+                <div class="text-center mb-4">
+                    <i class="fas fa-server text-4xl text-accent mb-3"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-4">Backend</h3>
+                <div class="space-y-3">
+                    <div>
+                        <div class="flex justify-between mb-1">
+                            <span>Node.js</span>
+                            <span>88%</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2">
+                            <div class="bg-accent h-2 rounded-full" style="width: 88%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-1">
+                            <span>Python</span>
+                            <span>75%</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2">
+                            <div class="bg-accent h-2 rounded-full" style="width: 75%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-1">
+                            <span>MongoDB</span>
+                            <span>82%</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2">
+                            <div class="bg-accent h-2 rounded-full" style="width: 82%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Outils -->
+            <div class="bg-white rounded-xl p-6 shadow-lg card-hover">
+                <div class="text-center mb-4">
+                    <i class="fas fa-tools text-4xl text-secondary mb-3"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-4">Outils & DevOps</h3>
+                <div class="space-y-3">
+                    <div>
+                        <div class="flex justify-between mb-1">
+                            <span>Git</span>
+                            <span>95%</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2">
+                            <div class="bg-secondary h-2 rounded-full" style="width: 95%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-1">
+                            <span>Docker</span>
+                            <span>78%</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2">
+                            <div class="bg-secondary h-2 rounded-full" style="width: 78%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-1">
+                            <span>AWS</span>
+                            <span>70%</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2">
+                            <div class="bg-secondary h-2 rounded-full" style="width: 70%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projets Section -->
+    <section id="projets" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-dark">Mes Projets</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Projet 1 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                    <img 
+                        src="https://picsum.photos/400/250?random=3" 
+                        alt="Application e-commerce" 
+                        class="w-full h-48 object-cover"
+                        loading="lazy"
+                    />
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Plateforme E-commerce</h3>
+                        <p class="text-gray-600 mb-4">Application React avec système de paiement sécurisé et gestion d'inventaire</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">React</span>
+                            <span class="bg-accent/10 text-accent px-3 py-1 rounded-full text-sm">Node.js</span>
+                            <span class="bg-secondary/10 text-secondary px-3 py-1 rounded-full text-sm">MongoDB</span>
+                        </div>
+                        <div class="flex space-x-3">
+                            <button class="text-primary hover:text-secondary transition-colors">
+                                <i class="fab fa-github"></i> Code
+                            </button>
+                            <button class="text-accent hover:text-green-700 transition-colors">
+                                <i class="fas fa-external-link-alt"></i> Demo
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projet 2 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                    <img 
+                        src="https://picsum.photos/400/250?random=4" 
+                        alt="Application de gestion de tâches" 
+                        class="w-full h-48 object-cover"
+                        loading="lazy"
+                    />
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Task Manager Pro</h3>
+                        <p class="text-gray-600 mb-4">Application de productivité avec collaboration en temps réel et analytics</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">Vue.js</span>
+                            <span class="bg-accent/10 text-accent px-3 py-1 rounded-full text-sm">Express</span>
+                            <span class="bg-secondary/10 text-secondary px-3 py-1 rounded-full text-sm">Socket.io</span>
+                        </div>
+                        <div class="flex space-x-3">
+                            <button class="text-primary hover:text-secondary transition-colors">
+                                <i class="fab fa-github"></i> Code
+                            </button>
+                            <button class="text-accent hover:text-green-700 transition-colors">
+                                <i class="fas fa-external-link-alt"></i> Demo
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projet 3 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                    <img 
+                        src="https://picsum.photos/400/250?random=5" 
+                        alt="Application météo" 
+                        class="w-full h-48 object-cover"
+                        loading="lazy"
+                    />
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Weather Analytics</h3>
+                        <p class="text-gray-600 mb-4">Dashboard de données météorologiques avec visualisations interactives</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">TypeScript</span>
+                            <span class="bg-accent/10 text-accent px-3 py-1 rounded-full text-sm">Python</span>
+                            <span class="bg-secondary/10 text-secondary px-3 py-1 rounded-full text-sm">D3.js</span>
+                        </div>
+                        <div class="flex space-x-3">
+                            <button class="text-primary hover:text-secondary transition-colors">
+                                <i class="fab fa-github"></i> Code
+                            </button>
+                            <button class="text-accent hover:text-green-700 transition-colors">
+                                <i class="fas fa-external-link-alt"></i> Demo
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-dark">Contactez-moi</h2>
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-white rounded-xl shadow-lg p-8">
+                    <form class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-gray-700 mb-2">Nom complet</label>
+                                <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Votre nom">
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 mb-2">Email</label>
+                                <input type="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="votre@email.com">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 mb-2">Sujet</label>
+                            <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Sujet du message">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 mb-2">Message</label>
+                            <textarea class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" rows="5" placeholder="Votre message..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-primary text-white py-3 rounded-lg hover:bg-secondary transition-colors font-semibold">
+                                Envoyer le message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-dark text-white py-12">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="mb-6 md:mb-0">
+                        <div class="text-2xl font-bold mb-2">DevPortfolio</div>
+                        <p class="text-gray-400">Créer l'avenir, une ligne de code à la fois</p>
+                    </div>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-github text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                        <p>&copy; 2024 DevPortfolio. Tous droits réservés.</p>
+                    </div>
+                </footer>
+
+                <script>
+                    // Navigation smooth scroll
+                    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                        anchor.addEventListener('click', function (e) {
+                            e.preventDefault();
+                            const target = document.querySelector(this.getAttribute('href'));
+                            if (target) {
+                                target.scrollIntoView({
+                                    behavior: 'smooth',
+                                    block: 'start'
+                                });
+                            }
+                        });
+                    });
+
+                    // Form submission
+                    document.querySelector('form').addEventListener('submit', function(e) {
+                        e.preventDefault();
+                        alert('Message envoyé avec succès ! Je vous répondrai dans les plus brefs délais.');
+                        this.reset();
+                    });
+
+                    // Download CV button
+                    document.querySelectorAll('button').forEach(button => {
+                        if (button.textContent.includes('Télécharger CV')) {
+                            button.addEventListener('click', function() {
+                                alert('Téléchargement du CV en cours...');
+                                // Ici vous pouvez ajouter le téléchargement réel du CV
+                            });
+                        }
+                    });
+                </script>
+            </body>
+            </html>
